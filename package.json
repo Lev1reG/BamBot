@@ -15,5 +15,8 @@
   "devDependencies": {
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "^1.33.2"
   }
 }
