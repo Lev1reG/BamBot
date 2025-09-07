@@ -77,6 +77,47 @@ rules.push(
     pattern: /\b(pelatihan|kelas|workshop|pendampingan|diklat)\b.*\bbambu\b/i,
     handler: () =>
       "Topik pelatihan: budidaya dasar, pengeringan, finishing/anti-rayap, desain produk, pemasaran digital (praktik kelompok).",
+  },
+  {
+    name: "LOCALE.JAWA",
+    priority: 80,
+    pattern: /\b(piye|opo|ngene|kowe|aku|kok|ndak|ora|nggih)\b/i,
+    handler: () =>
+      "Monggo 🙂. Menawi saged dipunperjelas: manfaat, penanaman, perawatan, produk, pasar, utawi pelatihan bambu?",
+  },
+  {
+    name: "SMALLTALK",
+    priority: 50,
+    pattern:
+      /\b(capek|lelah|bingung|semangat|mantap|keren|wow|bagus|terima kasih|makasih)\b/i,
+    handler: (m) =>
+      choose([
+        `Kenapa kamu merasa ${reflect(m[0])}? Ceritakan sedikit.`,
+        "Terima kasih! Ada topik bambu tertentu yang ingin dibahas?",
+      ]),
+  },
+  {
+    name: "ABUSE/SAFETY",
+    priority: 40,
+    pattern:
+      /\b(bodoh|goblok|anjir|anjing|k\**g|t*l*l|bacot|bangsat|kampret)\b/i,
+    handler: () =>
+      "Aku di sini untuk membantu. Bila ada yang kurang pas, beri tahu topik bambu yang kamu butuhkan—aku akan jelaskan lebih baik.",
+  },
+  {
+    name: "OUT_OF_SCOPE",
+    priority: 30,
+    pattern:
+      /\b(sepak\s*bola|game|crypto|kripto|motor|film|musik|kuliah|matkul|AI(?!.*bambu))\b/i,
+    handler: () =>
+      "Fokusku edukasi bambu. Coba tanya soal manfaat, penanaman, perawatan, produk, pasar, atau pelatihan bambu, ya.",
+  },
+  {
+    name: "FALLBACK",
+    priority: 0,
+    pattern: /([\s\S]+)/,
+    handler: (_m, original) =>
+      `Kamu bilang: “${reflect(original)}”. Bisa dirinci agar aku bisa bantu?`,
   }
 );
 
