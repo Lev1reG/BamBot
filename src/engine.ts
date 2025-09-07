@@ -50,6 +50,12 @@ const reflect = (text: string): string => {
 
 const choose = <T>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
 
+// --- Helpers ---
+const introduce = () =>
+  "Halo! Saya Bambot. Saya bisa bantu info seputar bambu: manfaat, penanaman, perawatan, produk, pasar, dan pelatihan. Tanyakan saja 🙂";
+const askNarrow = () =>
+  "Boleh dipersempit? Misalnya: *manfaat*, *cara menanam*, *perawatan*, *ide produk*, *cara menjual*, atau *pelatihan*.";
+
 export const respond = (input: string): string => {
   const trimmed = input.trim();
   for (const rule of [...rules].sort((a, b) => b.priority - a.priority)) {
