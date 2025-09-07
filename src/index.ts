@@ -1,5 +1,6 @@
 import { Client, LocalAuth, Message } from "whatsapp-web.js";
 import qrcode from "qrcode-terminal";
+import logger from "./logger";
 
 const client = new Client({
   authStrategy: new LocalAuth(),
@@ -15,12 +16,28 @@ const client = new Client({
 });
 
 client.on("qr", (qr: string) => {
-  console.log("QR Received");
+  logger.info("QR code received, ready to scan.");
   qrcode.generate(qr, { small: true });
 });
 
+client.on("loading_screen", (percent: number, message: string) => {
+  logger.debug("WhatsApp loading", { percent, message });
+});
+
+client.on("auth_failure", (msg: string) => {
+  logger.error("Authentication failure", { error: msg });
+});
+
+client.on("authenticated", () => {
+  logger.info("WhatsApp authenticated successfully!");
+});
+
+client.on("disconnected", (reason: string) => {
+  logger.warn("Client was logged out", { reason });
+});
+
 client.on("ready", () => {
-  console.log("Whatsapp client is ready!");
+  logger.info("Whatsapp client is ready!");
 });
 
 // ===== Handle incoming messages =====
