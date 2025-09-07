@@ -7,6 +7,26 @@ export type Rule = {
 
 export const rules: Rule[] = [];
 
+rules.push(
+  {
+    name: "GREET",
+    priority: 100,
+    pattern:
+      /\b(hai|halo|helo|hello|ass?alamualaikum|pagi|siang|sore|malam|hey)\b/i,
+    handler: () =>
+      choose([
+        introduce(),
+        "Halo! Ada yang bisa saya bantu seputar bambu hari ini?",
+      ]),
+  },
+  {
+    name: "HELP",
+    priority: 95,
+    pattern: /\b(bantu|tolong|help|bisa apa|cara pakai|panduan)\b/i,
+    handler: () => `${introduce()} ${askNarrow()}`,
+  }
+);
+
 // --- Reflection (ELIZA-style) ---
 const reflectionPairs: [RegExp, string][] = [
   [/\bI\b/gi, "you"],
