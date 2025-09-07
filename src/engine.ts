@@ -24,6 +24,59 @@ rules.push(
     priority: 95,
     pattern: /\b(bantu|tolong|help|bisa apa|cara pakai|panduan)\b/i,
     handler: () => `${introduce()} ${askNarrow()}`,
+  },
+  {
+    name: "FAQ.MANFAAT",
+    priority: 90,
+    pattern:
+      /\b(manfaat|kegunaan|keunggulan)\b.*\bbambu\b|\bbambu\b.*\b(manfaat|kegunaan|keunggulan)\b/i,
+    handler: () =>
+      choose([
+        "Manfaat bambu: bahan bangunan ramah lingkungan, furnitur/mebel, kerajinan, bioenergi, serta konservasi tanah & air.",
+        "Bambu tumbuh cepat, jejak karbon rendah, kuat & fleksibel—cocok untuk mebel, anyaman, hingga panel bangunan.",
+      ]),
+  },
+  {
+    name: "FAQ.PERAWATAN",
+    priority: 90,
+    pattern:
+      /\b(rawat|perawatan|hama|penyakit|pemupukan|penyiraman|pangkas|pruning)\b.*\bbambu\b/i,
+    handler: () =>
+      "Perawatan: siram teratur (tidak becek), pupuk NPK tiap 2–3 bulan, pangkas rebung lemah, kendali hama mekanis + bio-pestisida.",
+  },
+  {
+    name: "FAQ.PENANAMAN",
+    priority: 90,
+    pattern:
+      /\b(tanam|menanam|bibit|stek|rimpang|jarak tanam|media tanam|lahan)\b.*\bbambu\b/i,
+    handler: () =>
+      "Gunakan bibit sehat (stek/rimpang), jarak 3–5 m sesuai varietas, tanah gembur & drainase baik, tambah mulsa organik.",
+  },
+  {
+    name: "FAQ.PRODUK",
+    priority: 85,
+    pattern:
+      /\b(produk|kerajinan|mebel|anyam(an)?|panel|dekorasi|ukm|ide)\b.*\bbambu\b/i,
+    handler: () =>
+      choose([
+        "Ide: anyaman (keranjang/tikar), mebel (kursi/meja), dekorasi (lampu/pot), panel dinding, sedotan bambu.",
+        "Mulai: riset tren lokal, buat contoh kecil, uji sambungan/finishing, foto & jual via medsos/toko lokal.",
+      ]),
+  },
+  {
+    name: "FAQ.PASAR",
+    priority: 85,
+    pattern:
+      /\b(pasar|jual|harga|pemasaran|permintaan|market|jualan|menjual)\b.*\bbambu\b/i,
+    handler: () =>
+      "Pemasaran: foto rapi, storytelling asal-usul, titip jual di toko oleh-oleh, promosi di WA/FB/IG/TikTok, ikut bazar UMKM.",
+  },
+  {
+    name: "FAQ.PELATIHAN",
+    priority: 85,
+    pattern: /\b(pelatihan|kelas|workshop|pendampingan|diklat)\b.*\bbambu\b/i,
+    handler: () =>
+      "Topik pelatihan: budidaya dasar, pengeringan, finishing/anti-rayap, desain produk, pemasaran digital (praktik kelompok).",
   }
 );
 
