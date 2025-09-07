@@ -13,10 +13,16 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/node": "^24.3.1",
     "@types/qrcode-terminal": "^0.12.2",
     "@types/winston": "^2.4.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "i": "^0.3.7",
     "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2"
+    "npm": "^11.6.0",
+    "ts-node": "^10.9.2",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "qrcode-terminal": "^0.12.0",
