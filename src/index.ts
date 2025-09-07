@@ -1,4 +1,4 @@
-import { Client, LocalAuth } from "whatsapp-web.js";
+import { Client, LocalAuth, Message } from "whatsapp-web.js";
 import qrcode from "qrcode-terminal";
 
 const client = new Client({
@@ -21,6 +21,21 @@ client.on("qr", (qr: string) => {
 
 client.on("ready", () => {
   console.log("Whatsapp client is ready!");
+});
+
+// ===== Handle incoming messages =====
+client.on("message", async (message: Message) => {
+  if (message.from === "status@broadcast") return;
+  if (message.fromMe) return;
+
+  const prefix = "@bambot";
+  if (!message.body.toLowerCase().startsWith(prefix.toLowerCase())) {
+    return;
+  }
+
+  const input = message.body.slice(prefix.length).trim();
+
+  // TODO: Process the input and generate a response
 });
 
 client.initialize();
