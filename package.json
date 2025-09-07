@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run",
-    "test:ui": "vitest --ui",
-    "test:watch": "vitest",
+    "test": "node --experimental-vm-modules ./node_modules/vitest/vitest.mjs run",
+    "test:watch": "node --experimental-vm-modules ./node_modules/vitest/vitest.mjs",
     "dev": "nodemon",
     "build": "tsc",
     "start": "node dist/index.js"
