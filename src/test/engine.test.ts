@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { respond } from "../src/engine";
+import { respond } from "../engine";
 
 describe("Bambot regex", () => {
   // 1) GREET (tanpa @bambot harus tetap jalan)
