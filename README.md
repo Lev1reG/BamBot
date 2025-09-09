@@ -2,6 +2,18 @@
 
 BamBot adalah chatbot WhatsApp berbasis aturan (rule-based) yang dirancang untuk memberikan edukasi tentang pengolahan bambu kepada masyarakat Kecamatan Sapuran, Wonosobo. Bot ini membantu memaksimalkan potensi ekonomi bambu yang melimpah di daerah tersebut.
 
+## Struktur Project
+
+```
+src/
+├── index.ts           # Entry point & WhatsApp integration
+├── engine.ts          # Rule-based response engine
+├── logger.ts          # Winston logging configuration
+├── demo.ts            # Demo/testing file
+└── test/
+    └── engine.test.ts # Unit tests
+```
+
 ## Setup & Installation
 
 1. **Clone Repository**
@@ -48,3 +60,10 @@ npm test
 2. Scan QR code yang muncul di terminal dengan WhatsApp
 3. Setelah terkoneksi, bot siap menerima pesan
 4. Kirim pesan dengan prefix `@bambot` untuk mengaktifkan bot
+
+## Logs
+
+**Logs**: Tersimpan di folder `logs/` dengan digenerate otomatis saat aplikasi berjalan.
+
+- `combined.log` - Semua log aplikasi
+- `error.log` - Hanya log error

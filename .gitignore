@@ -2,4 +2,3 @@ node_modules/
 dist/
 .wwebjs_auth/
 .wwebjs_cache/
-logs/

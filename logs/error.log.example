@@ -1,0 +1,5 @@
+# This file keeps the logs directory in Git
+# Actual log files will be generated when the application runs
+
+{"level":"error","message":"Error processing message","error":"Network timeout","stack":"Error: Network timeout\n    at processMessage (/app/src/index.ts:75:15)","from":"6281234567890@c.us","messageBody":"@bambot cara membuat kursi bambu yang kuat dan...","service":"bambot","timestamp":"2025-09-09 14:32:15"}
+{"level":"error","message":"Failed to send error response","error":"Connection lost","to":"6281234567890@c.us","service":"bambot","timestamp":"2025-09-09 14:32:16"}

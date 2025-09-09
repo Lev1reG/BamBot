@@ -1,0 +1,23 @@
+# This file keeps the logs directory in Git
+# Actual log files will be generated when the application runs
+
+{"level":"info","message":"Starting BamBot...","timestamp":"2025-09-09 16:41:20"}
+{"level":"info","message":"Starting BamBot...","timestamp":"2025-09-09 17:27:49"}
+{"level":"info","message":"WhatsApp authenticated successfully!","timestamp":"2025-09-09 17:28:01"}
+{"level":"info","message":"Whatsapp client is ready!","timestamp":"2025-09-09 17:28:02"}
+{"from":"6281905378266@c.us","isGroupMsg":false,"level":"info","message":"Message received","messageLength":12,"messageType":"chat","timestamp":"2025-09-09 17:28:10"}
+{"from":"6281905378266@c.us","input":"Halo","inputLength":4,"isGroup":false,"level":"info","message":"Processing message","timestamp":"2025-09-09 17:28:10"}
+{"input":"Halo","level":"info","message":"Response sent successfully","responseLength":54,"timestamp":"2025-09-09 17:28:10","to":"6281905378266@c.us"}
+{"from":"6281905378266@c.us","isGroupMsg":false,"level":"info","message":"Message received","messageLength":43,"messageType":"chat","timestamp":"2025-09-09 17:29:02"}
+{"from":"6281905378266@c.us","input":"Bantu saya membuat ide produk bambu","inputLength":35,"isGroup":false,"level":"info","message":"Processing message","timestamp":"2025-09-09 17:29:02"}
+{"input":"Bantu saya membuat ide produk bambu","level":"info","message":"Response sent successfully","responseLength":249,"timestamp":"2025-09-09 17:29:02","to":"6281905378266@c.us"}
+{"from":"6281905378266@c.us","isGroupMsg":false,"level":"info","message":"Message received","messageLength":37,"messageType":"chat","timestamp":"2025-09-09 17:29:16"}
+{"from":"6281905378266@c.us","input":"bagaimana cara menjual bambu?","inputLength":29,"isGroup":false,"level":"info","message":"Processing message","timestamp":"2025-09-09 17:29:16"}
+{"input":"bagaimana cara menjual bambu?","level":"info","message":"Response sent successfully","responseLength":120,"timestamp":"2025-09-09 17:29:16","to":"6281905378266@c.us"}
+{"from":"6281905378266@c.us","isGroupMsg":false,"level":"info","message":"Message received","messageLength":33,"messageType":"chat","timestamp":"2025-09-09 17:31:14"}
+{"from":"6281905378266@c.us","input":"kok kamu bodoh banget coy","inputLength":25,"isGroup":false,"level":"info","message":"Processing message","timestamp":"2025-09-09 17:31:14"}
+{"input":"kok kamu bodoh banget coy","level":"info","message":"Response sent successfully","responseLength":107,"timestamp":"2025-09-09 17:31:14","to":"6281905378266@c.us"}
+{"from":"6281905378266@c.us","isGroupMsg":false,"level":"info","message":"Message received","messageLength":14,"messageType":"chat","timestamp":"2025-09-09 17:31:25"}
+{"from":"6281905378266@c.us","input":"bodohh","inputLength":6,"isGroup":false,"level":"info","message":"Processing message","timestamp":"2025-09-09 17:31:25"}
+{"input":"bodohh","level":"info","message":"Response sent successfully","responseLength":56,"timestamp":"2025-09-09 17:31:26","to":"6281905378266@c.us"}
+{"from":"6285601691970@c.us","isGroupMsg":false,"level":"info","message":"Message received","messageLength":22,"messageType":"chat","timestamp":"2025-09-09 17:33:22"}
