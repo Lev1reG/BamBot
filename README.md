@@ -4,7 +4,7 @@ BamBot adalah chatbot WhatsApp berbasis aturan (rule-based) yang dirancang untuk
 
 ## Demo
 
-https://github.com/user-attachments/assets/b83fae6e-4593-45fe-b491-aa036c61c334
+https://github.com/user-attachments/assets/c3a6a6d2-e78b-413d-90c4-22c17e20619c
 
 https://github.com/user-attachments/assets/e42be723-dd29-4971-bd54-8d7d5d8c7c58
 
