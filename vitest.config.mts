@@ -5,7 +5,7 @@ export default defineConfig({
   test: {
     globals: true, // biar bisa langsung pakai describe/it/expect tanpa import
     environment: "node",
-    include: ["test/**/*.test.ts"], // lokasi test
+    include: ["src/test/**/*.test.ts"], // lokasi test
     coverage: {
       reporter: ["text", "html"],
     },

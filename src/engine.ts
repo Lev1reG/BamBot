@@ -59,7 +59,7 @@ rules.push(
     name: "FAQ.PERAWATAN",
     priority: 90,
     pattern:
-      /\b(rawat|perawatan|hama|penyakit|pemupukan|penyiraman|pangkas|pruning)\b.*\bbambu\b/i,
+      /\b(rawat|merawat|perawatan|hama|penyakit|pemupukan|penyiraman|pangkas|pruning)\b.*\bbambu\b/i,
     handler: () =>
       "*🧰 Perawatan Bambu*\n\n" +
       "1. *Siram* rutin, hindari becek\n" +
