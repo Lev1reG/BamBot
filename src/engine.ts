@@ -16,14 +16,23 @@ rules.push(
     handler: () =>
       choose([
         introduce(),
-        "Halo! Ada yang bisa saya bantu seputar bambu hari ini? Kita bisa bahas manfaat, cara menanam/merawat, ide produk, pemasaran, dan pelatihan.",
+        "*👋 Halo!* \n\nAda yang bisa saya bantu seputar *bambu* hari ini? Kita bisa bahas *manfaat, cara menanam/merawat, ide produk, pemasaran,* dan *pelatihan*.",
       ]),
   },
   {
     name: "HELP",
     priority: 95,
     pattern: /\b(bantu|tolong|help|bisa apa|cara pakai|panduan)\b/i,
-    handler: () => `${introduce()} ${askNarrow()}`,
+    handler: () =>
+      "*🧭 Bantuan*\n\n" +
+      "Silakan pilih salah satu topik:\n" +
+      "1. *Manfaat bambu*\n" +
+      "2. *Cara menanam*\n" +
+      "3. *Perawatan*\n" +
+      "4. *Ide produk*\n" +
+      "5. *Pemasaran*\n" +
+      "6. *Pelatihan*\n\n" +
+      "_Contoh:_ ketik: *manfaat* / *tanam* / *rawat* / *produk* / *pasar* / *pelatihan*",
   },
   {
     name: "FAQ.MANFAAT",
@@ -33,8 +42,16 @@ rules.push(
     handler: () =>
       choose([
         choose([
-          "Berikut gambaran manfaat bambu yang relevan untuk desa: (1) Ekonomi—produk bernilai tambah (mebel, anyaman, dekorasi); (2) Lingkungan—serapan CO₂ baik & konservasi tanah/air; (3) Material—kuat, lentur, dan lebih ramah lingkungan; (4) Sosial/budaya—mengangkat kearifan lokal.",
-          "Manfaat bambu: bahan baku produk kreatif (UMKM), pertumbuhan cepat (lebih cepat panen), jejak karbon rendah, dan memperkuat citra lokal. Cocok untuk produk fungsional maupun dekoratif.",
+          "Berikut gambaran manfaat bambu yang relevan untuk desa:\n\n" +
+            "• *Ekonomi*: bahan produk bernilai tambah (mebel, anyaman, dekorasi)\n" +
+            "• *Lingkungan*: serapan CO₂ baik; akar bantu konservasi tanah & air\n" +
+            "• *Material*: kuat, lentur, relatif ramah lingkungan\n" +
+            "• *Sosial/Budaya*: angkat kearifan lokal & identitas desa\n\n",
+          "*🌿 Manfaat Bambu*\n\n" +
+            "• Bahan baku *UMKM* yang mudah diolah\n" +
+            "• *Pertumbuhan cepat* → lebih cepat panen\n" +
+            "• *Jejak karbon rendah*\n" +
+            "• Cocok untuk produk *fungsional* & *dekoratif*",
         ]),
       ]),
   },
@@ -44,7 +61,12 @@ rules.push(
     pattern:
       /\b(rawat|perawatan|hama|penyakit|pemupukan|penyiraman|pangkas|pruning)\b.*\bbambu\b/i,
     handler: () =>
-      "Perawatan praktis: (1) Siram rutin tapi jangan becek; (2) Pupuk NPK ringan tiap 2-3 bulan + kompos/mulsa; (3) Pangkas rebung/ruas lemah agar sirkulasi bagus; (4) Hama/penyakit—mulai dari mekanis, lanjut bio-pestisida bila perlu; (5) Jaga kebersihan rumpun.",
+      "*🧰 Perawatan Bambu*\n\n" +
+      "1. *Siram* rutin, hindari becek\n" +
+      "2. *Pupuk* NPK ringan tiap *2-3 bulan* + kompos/mulsa\n" +
+      "3. *Pangkas* rebung/ruas lemah agar sirkulasi bagus\n" +
+      "4. *Hama/Penyakit*: mulai mekanis → lanjut *bio-pestisida* bila perlu\n" +
+      "5. *Kebersihan rumpun*: singkirkan serasah berlebih\n\n",
   },
   {
     name: "FAQ.PENANAMAN",
@@ -52,7 +74,11 @@ rules.push(
     pattern:
       /\b(tanam|menanam|bibit|stek|rimpang|jarak tanam|media tanam|lahan)\b.*\bbambu\b/i,
     handler: () =>
-      "Panduan ringkas: gunakan bibit sehat (stek/rimpang), jarak tanam umumnya 3-5 m (tergantung varietas & kepadatan), tanah gembur berdrainase baik, tambah kompos & mulsa. 2-4 minggu awal, jaga kelembapan & pantau daun.",
+      "*🌱 Penanaman Bambu*\n\n" +
+      "1. Pakai *bibit sehat* (stek/rimpang)\n" +
+      "2. *Jarak tanam* umumnya *3-5 m* (tergantung varietas & kepadatan)\n" +
+      "3. Tanah *gembur* + *drainase* baik; tambah *kompos* & *mulsa*\n" +
+      "4. 2-4 minggu awal: jaga *kelembapan* & pantau *daun*\n\n",
   },
   {
     name: "FAQ.PRODUK",
@@ -60,10 +86,16 @@ rules.push(
     pattern:
       /\b(produk|kerajinan|mebel|anyam(an)?|panel|dekorasi|ukm|ide)\b.*\bbambu\b/i,
     handler: () =>
-      choose([
-        "Berikut contoh beberapa ide yang dapat langsung dicoba: (1) Anyaman—keranjang, tatakan, tudung saji; (2) Mebel mini—stool, rak dinding/tanaman; (3) Dekorasi—lampu meja/dinding, bingkai foto, pot cover; (4) Perlengkapan makan—sendok kayu+bambu, sedotan (finishing food-safe). Langkah mulai: riset selera lokal, buat 1-2 prototipe, foto rapi, uji harga di pasar/online, kumpulkan feedback, lalu produksi kecil bertahap.",
-        "Ide produk pemula: anyaman sederhana, rak tanaman, lampu hias, dan aksesori meja. Kunci awal: sambungan kuat, finishing halus, dan foto yang menjual.",
-      ]),
+      "*💡 Ide Produk Bambu*\n\n" +
+      "• *Anyaman*: keranjang, tatakan, tudung saji\n" +
+      "• *Mebel mini*: stool, rak dinding/tanaman (*fokus sambungan & finishing*)\n" +
+      "• *Dekorasi*: lampu meja/dinding, bingkai foto, pot cover\n" +
+      "• *Perlengkapan makan*: sendok kayu+bambu, sedotan (*finishing food-safe*)\n\n" +
+      "*Langkah mulai:*\n" +
+      "1. Riset selera lokal\n" +
+      "2. Buat 1-2 prototipe & foto rapi\n" +
+      "3. Uji harga di pasar/online\n" +
+      "4. Kumpulkan feedback → produksi kecil bertahap",
   },
   {
     name: "FAQ.PASAR",
@@ -71,14 +103,25 @@ rules.push(
     pattern:
       /\b(pasar|jual|harga|pemasaran|permintaan|market|jualan|menjual)\b.*\bbambu\b/i,
     handler: () =>
-      "Pemasaran efektif: (1) Bangun cerita produk (lokal, ramah lingkungan, dampak sosial); (2) Foto & katalog rapi (ukuran, harga, paket bundling); (3) Kanal—titip di toko oleh-oleh, promosi WA/FB/IG/TikTok, coba pre-order; (4) Harga—catat bahan/waktu kerja & margin, uji beberapa harga; (5) Pelanggan ulang—minta ulasan & berikan kode diskon.",
+      "*🛒 Pemasaran Produk Bambu*\n\n" +
+      "1. *Storytelling*: bahan lokal & dampak sosial\n" +
+      "2. *Foto/katalog*: latar bersih, ukuran, harga, paket bundling\n" +
+      "3. *Kanal*: titip toko oleh-oleh; promosi WA/FB/IG/TikTok; coba *pre-order*\n" +
+      "4. *Harga*: catat bahan & waktu kerja; uji beberapa harga\n" +
+      "5. *Repeat order*: minta *ulasan* + berikan *kode diskon*",
   },
   {
     name: "FAQ.PELATIHAN",
     priority: 85,
     pattern: /\b(pelatihan|kelas|workshop|pendampingan|diklat)\b.*\bbambu\b/i,
     handler: () =>
-      "Rancangan pelatihan singkat: (1) Potensi bambu & peluang ekonomi; (2) Teknik budidaya, panen, pengeringan; (3) Praktik membuat 1 produk (anyaman/mebel mini) + safety alat; (4) Finishing/anti-rayap & QC; (5) Pemasaran digital (foto, caption, harga, pre-order). Siapkan modul ringkas & daftar alat supaya peserta bisa langsung praktik di rumah.",
+      "*👩‍🏫 Rekomendasi Pelatihan Singkat*\n\n" +
+      "1. *Potensi bambu* & peluang ekonomi\n" +
+      "2. *Budidaya, panen, pengeringan* (dasar)\n" +
+      "3. *Praktik* 1 produk (anyaman/mebel mini) + *safety alat*\n" +
+      "4. *Finishing/anti-rayap* & *QC*\n" +
+      "5. *Pemasaran digital*: foto, caption, harga, pre-order\n\n" +
+      "_Siapkan modul ringkas & daftar alat agar mudah direplikasi._",
   },
   {
     name: "LOCALE.JAWA",
@@ -94,8 +137,11 @@ rules.push(
       /\b(capek|lelah|bingung|semangat|mantap|keren|wow|bagus|terima kasih|makasih)\b/i,
     handler: (m) =>
       choose([
-        `Kenapa kamu merasa ${reflect(m[0])}? Ceritakan sedikit.`,
-        "Terima kasih! Ada topik bambu tertentu yang ingin dibahas?",
+        "*💬*\n\n" +
+          `Kenapa kamu merasa *${reflect(m[0])}*? ` +
+          "Boleh ceritakan sedikit.",
+        "*💬*\n\n" +
+          "Terima kasih! Ada topik bambu tertentu yang ingin dibahas?",
       ]),
   },
   {
@@ -104,7 +150,8 @@ rules.push(
     pattern:
       /\b(bodoh|goblok|anjir|anjing|k\**g|t*l*l|bacot|bangsat|kampret)\b/i,
     handler: () =>
-      "Aku di sini untuk membantu. Bila ada yang kurang pas, beri tahu topik bambu yang kamu butuhkan, aku akan jelaskan lebih baik.",
+      "*🤝*\n\n" +
+      "Aku di sini untuk membantu. Jika ada yang kurang pas, beri tahu bagian mana yang ingin kamu perjelas—aku akan jelaskan dengan lebih baik dan pelan-pelan.",
   },
   {
     name: "OUT_OF_SCOPE",
@@ -112,14 +159,23 @@ rules.push(
     pattern:
       /\b(sepak\s*bola|game|crypto|kripto|motor|film|musik|kuliah|matkul|AI(?!.*bambu))\b/i,
     handler: () =>
-      "Fokusku edukasi bambu. Coba tanya soal manfaat, penanaman, perawatan, ide produk, pemasaran, atau pelatihan bambu, aku siap bantu.",
+      "*ℹ️ Di luar cakupan*\n\n" +
+      "Fokusku *edukasi bambu*. Coba pilih topik berikut:\n" +
+      "• *Manfaat bambu*\n" +
+      "• *Cara menanam*\n" +
+      "• *Perawatan*\n" +
+      "• *Ide produk*\n" +
+      "• *Pemasaran*\n" +
+      "• *Pelatihan*",
   },
   {
     name: "FALLBACK",
     priority: 0,
     pattern: /([\s\S]+)/,
     handler: (_m, original) =>
-      `Kamu bilang: “${reflect(original)}”. Bisa dirinci agar aku bisa bantu?`,
+      "*❓*\n\n" +
+      `Kamu bilang: “*${reflect(original)}*”. \n` +
+      "Boleh ceritakan lebih rinci bagian mana yang ingin kamu bahas—supaya aku bisa menyamakan konteks dan bantu lebih tepat?",
   }
 );
 
@@ -168,7 +224,7 @@ const choose = <T>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
 
 // --- Helpers ---
 const introduce = () =>
-  "Halo! Saya Bambot. Saya bisa bantu info seputar bambu mulai dari manfaat, penanaman, perawatan, ide produk, pemasaran, sampai pelatihan. Silakan tanya topik yang kamu butuhkan ya 🙂";
+  "*👋 Halo!* \n\nSaya *Bambot*. Saya bisa bantu seputar *bambu*: manfaat, penanaman, perawatan, ide produk, pemasaran, dan pelatihan. \n\nTanyakan topik yang kamu butuhkan ya 🙂";
 const askNarrow = () =>
   "Biar fokus, boleh dipersempit: misalnya *manfaat bambu*, *cara menanam*, *cara merawat*, *ide produk yang laku*, *cara menjual & riset harga*, atau *pelatihan yang cocok untuk warga*.";
 
