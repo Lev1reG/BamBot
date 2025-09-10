@@ -179,19 +179,9 @@ rules.push(
   }
 );
 
-// --- Reflection (ELIZA-style) ---
+// --- Reflection (Indonesia + Jawa ELIZA-style) ---
 const reflectionPairs: [RegExp, string][] = [
-  [/\bI\b/gi, "you"],
-  [/\bme\b/gi, "you"],
-  [/\bmy\b/gi, "your"],
-  [/\bmine\b/gi, "yours"],
-  [/\bmyself\b/gi, "yourself"],
-  [/\bam\b/gi, "are"],
-  [/\byou\b/gi, "I"],
-  [/\byour\b/gi, "my"],
-  [/\byours\b/gi, "mine"],
-  [/\byourself\b/gi, "myself"],
-  [/\bare\b/gi, "am"],
+  // Indonesia (formal & sehari-hari)
   [/\bsaya\b/gi, "kamu"],
   [/\baku\b/gi, "kamu"],
   [/\bpunyaku\b/gi, "punyamu"],
@@ -200,7 +190,18 @@ const reflectionPairs: [RegExp, string][] = [
   [/\bmilikmu\b/gi, "milikku"],
   [/\bdiriku\b/gi, "dirimu"],
   [/\bdirimu\b/gi, "diriku"],
+  [/\bkami\b/gi, "kamu"],
   [/\bkam(u|i)\b/gi, "saya"],
+
+  // Jawa (umum dipakai di Sapuran, Wonosobo)
+  [/\bakú\b/gi, "kowe"], // aku → kowe
+  [/\bkowe\b/gi, "aku"], // kowe → aku
+  [/\bawakmu\b/gi, "awakku"], // awakmu → awakku
+  [/\bawakku\b/gi, "awakmu"],
+  [/\bdirimu\b/gi, "diriku"],
+  [/\bdiriku\b/gi, "dirimu"],
+  [/\baku iki\b/gi, "kowe kuwi"], // variasi idiomatis
+  [/\bkok\b/gi, "ngapa"], // refleksi ringan (opsional)
 ];
 
 const preserveCase = (repl: string, original: string) => {
