@@ -2,6 +2,12 @@
 
 BamBot adalah chatbot WhatsApp berbasis aturan (rule-based) yang dirancang untuk memberikan edukasi tentang pengolahan bambu kepada masyarakat Kecamatan Sapuran, Wonosobo. Bot ini membantu memaksimalkan potensi ekonomi bambu yang melimpah di daerah tersebut.
 
+## Demo
+
+https://github.com/user-attachments/assets/b83fae6e-4593-45fe-b491-aa036c61c334
+
+https://github.com/user-attachments/assets/e42be723-dd29-4971-bd54-8d7d5d8c7c58
+
 ## Struktur Project
 
 ```
